@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import Card from './card'
 import { getMoviesRecommended,filterByStar,cleanStates } from '../redux/actions'
 import SearchBar from './searchBar'
+import homestyles from'./home.module.css'
 
 export function Home() {
 const dispatch = useDispatch()
@@ -28,8 +29,8 @@ if(searchState.length>0) allmovies=searchState
 else if(filtered.length>0) allmovies=filtered
     
 return (
-        <div> <h1>App  Movies </h1>
-            <label >Filter by stars</label>
+        <div className={homestyles.fondo}> <h1 className={homestyles.h1}>App  Movies </h1>
+            <label className= {homestyles.h2} >Filter by stars</label>
             <select onChange={e => handleFilterByStars(e)} >
                 <option value='seleccionar' >seleccionar</option>
                 <option value='1' >*</option>
@@ -40,14 +41,20 @@ return (
              </select>
             <p></p>
             <SearchBar />
-            <button onClick={e=>handleClick(e)} ><div>Cargar videogames</div></button> 
+            <button onClick={e=>handleClick(e)} ><div className={homestyles.h1}>Cargar videogames</div></button> 
             {
                 <div > {allmovies?.map(e => {
                     return (
                         <div key={e.id}>
-                            <Link to={'/Detail/' + e.id}>
-                                <Card id={e.id} title={e.title} poster={e.poster}/>
+                            {e===allmovies[0]? <Link to={'/Detail/' + e.id}>
+                                <Card id={e.id} title={e.title} poster={e.poster} primero={true}/>
                             </Link>
+                            :    <Link to={'/Detail/' + e.id}>
+                                <Card id={e.id} title={e.title} poster={e.poster} primero={false}/>
+                            </Link>
+                            
+                            }
+                        
                         </div>
                     )
                 })
