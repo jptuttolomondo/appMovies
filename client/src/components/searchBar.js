@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { cleanSearch,getNameMovie} from "../redux/actions";
-//import searchBarStyle from'./searchBar.module.css'
+import searchBarStyle from'./searchBar.module.css'
 export default function SearchBar(){
 const dispatch=useDispatch()
 const [name,setName]=useState("")
@@ -18,13 +18,13 @@ function handleSubmit(e){
     dispatch(getNameMovie(name))
  }
 return (
-<div >
+<div className={searchBarStyle.bloque}>
     
-<label >Find movies by name</label>
+<label  className={searchBarStyle.letra} >Find movies by name</label>
 <input type='text'
-placeholder='find a movie...'
-onChange={(e)=>handleInputChange(e)} />
-<button type='submit' onClick={(e)=>handleSubmit(e)} >Find! </button>
+placeholder='find a movie...' 
+onChange={(e)=>handleInputChange(e)}  className={searchBarStyle.inputSearch} />
+<button type='submit' onClick={(e)=>handleSubmit(e)}  className={searchBarStyle.buttonSearch}>Find! </button>
 </div>
 )
 }
