@@ -13,7 +13,7 @@
   border-style: solid;
   border-color: rgb(32, 80, 0);
   border-width: 10px;
-  width: 40rem;
+  width: 30rem;
   height: 41rem;
   text-align: center;
   margin-top: 20px;
@@ -81,3 +81,26 @@
   margin-right: auto;
   text-align: center;
 }
+
+/* -------------------- MEDIA QUERIES (MEDIUM DEVICES) -------------------- */
+
+@media screen and (max-width: 1024px) {
+  .container{
+      width: var(--cotainer-width-md);
+  }
+  section{
+      margin-top: 6rem;
+  }
+}
+
+/* -------------------- MEDIA QUERIES (SMALL DEVICES) -------------------- */
+
+@media screen and (max-width: 600px) {
+  .container{
+      width: var(--cotainer-width-ms);
+  }
+  section > h2{
+      margin-bottom: 2rem;
+  }
+}
+  
