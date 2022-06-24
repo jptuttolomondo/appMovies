@@ -11,3 +11,26 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* -------------------- MEDIA QUERIES (MEDIUM DEVICES) -------------------- */
+
+@media screen and (max-width: 1024px) {
+  .container{
+      width: var(--cotainer-width-md);
+  }
+  section{
+      margin-top: 6rem;
+  }
+}
+
+/* -------------------- MEDIA QUERIES (SMALL DEVICES) -------------------- */
+
+@media screen and (max-width: 600px) {
+  .container{
+      width: var(--cotainer-width-ms);
+  }
+  section > h2{
+      margin-bottom: 2rem;
+  }
+}
+  
