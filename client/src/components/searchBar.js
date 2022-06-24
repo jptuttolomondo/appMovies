@@ -19,7 +19,6 @@ function handleSubmit(e){
  }
 return (
 <div className={searchBarStyle.bloque}>
-    
 <label  className={searchBarStyle.letra} >Find movies by name</label>
 <input type='text'
 placeholder='find a movie...' 

@@ -4,7 +4,6 @@ copiaMovies:[],
 detail:[],
 filterByStar:[],
 search:[],
-auxiliar:[],
 }
 
 export function Reducer(state=initialState,action){
@@ -14,12 +13,9 @@ case 'GETDETAIL': return{...state,detail:action.payload}
 case 'GET_NAME_MOVIE': return{...state,search:action.payload}
 case 'FILTER_BY_STAR':  
 const allmovies=state.copiaMovies
-//console.log(allmovies)
-//console.log(action.payload)
 const movieFiltered=action.payload==='seleccionar'? allmovies:allmovies.filter(elem=>{
   if(elem.vote_average>=action.payload[0]&&elem.vote_average<action.payload[1])return true
     return undefined })
-//console.log('filtrado',movieFiltered)
 {if(movieFiltered.length<1){ alert("There isn't a movie whith this star/s category" )
                             window.location.replace('/home')}}
 return {...state,filterByStar:movieFiltered}

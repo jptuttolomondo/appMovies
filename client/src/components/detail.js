@@ -19,7 +19,6 @@ function handleClick(e){
   dispatch(cleanDetail())
 }
 
-
 return(
 <div className={detailFormat.detailBody}>
       <h1>Movie Details</h1> 

@@ -44,22 +44,6 @@
   padding: 1em;
 }
 
-.videocards {
-  background-color: rgb(18, 19, 18);
-  margin: 20px;
-  border-radius: 5%;
-  border-style: solid;
-  border-color: rgb(70, 241, 2);
-  width: 6rem;
-  height: 6rem;
-  text-align: center;
-  font-size: 8px;
-  color: beige;
-  font-family: cursive;
-  text-decoration-line: none;
-  text-decoration: none;
-}
-
 .cardTitle {
   text-align: center;
   font-family: cursive;

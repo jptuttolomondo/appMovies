@@ -8,7 +8,6 @@ async function  getMoviesApi()  {
        return salida
     }
   catch{alert('api connection error')}
-
 }
 export const getMoviesRecommended=()=>{
     return async (dispatch)=>{
@@ -40,7 +39,6 @@ try{
     catch(error){console.log('id not exist')}
 }
 }
-
 
 export function cleanDetail(){
     return async function(dispatch){
